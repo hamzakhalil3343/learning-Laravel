@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Users;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,9 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::view("/","hello");
-// Route::get('/{name}', function ($name) {
-//     return view('hello',["name"=>$name]);
-// });
+
+Route::get('/', function () {
+    return view('hello');
+});
 Route::view("welcome","welcome");
+Route::get('users/{name}',[Users::class,'index']);
 
