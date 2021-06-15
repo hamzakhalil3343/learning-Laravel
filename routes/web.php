@@ -14,8 +14,8 @@ use App\Http\Controllers\Users;
 */
 
 Route::get('/', function () {
-    return view('hello');
+    return view('users');
 });
 Route::view("welcome","welcome");
-Route::get('users/{name}',[Users::class,'index']);
+// Route::get('users/{name}',[Users::class,'index']);
 
