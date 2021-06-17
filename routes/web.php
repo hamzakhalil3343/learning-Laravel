@@ -25,3 +25,6 @@ Route::get('users',[UsersController::class,'viewLoad']);
 Route::view("form","formData");
 Route::post('form',[Formcontroller::class,'getData']);
 
+//Global Middle wares 
+Route::view("noaccess","noaccess");
+Route::view("home","home");
