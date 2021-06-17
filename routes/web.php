@@ -18,8 +18,10 @@ Route::get('/', function () {
     return view('users');
 });
 Route::view("welcome","welcome");
-Route::view("form","formData");
+
 // Route::get('users/{name}',[Users::class,'index']);
 Route::get('users',[UsersController::class,'viewLoad']);
+//HTML Form 
+Route::view("form","formData");
 Route::post('form',[Formcontroller::class,'getData']);
 

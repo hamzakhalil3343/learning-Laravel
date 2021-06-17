@@ -9,6 +9,7 @@ class Formcontroller extends Controller
 {
     //
     function getData(Request $req){
+        $req->validate(['username'=>'required ','password'=>'required | min:5']);
         return  $req->input();
     }
 }
