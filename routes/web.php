@@ -28,3 +28,8 @@ Route::post('form',[Formcontroller::class,'getData']);
 //Global Middle wares 
 Route::view("noaccess","noaccess");
 Route::view("home","home");
+
+//Group MW
+Route::group(['middleware'=>['protectedPages']],function(){
+    Route::view("groupMW","groupMW"); 
+});
