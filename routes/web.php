@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\Formcontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,8 @@ Route::get('/', function () {
     return view('users');
 });
 Route::view("welcome","welcome");
+Route::view("form","formData");
 // Route::get('users/{name}',[Users::class,'index']);
 Route::get('users',[UsersController::class,'viewLoad']);
+Route::post('form',[Formcontroller::class,'getData']);
 
