@@ -33,3 +33,6 @@ Route::view("home","home");
 Route::group(['middleware'=>['protectedPages']],function(){
     Route::view("groupMW","groupMW"); 
 });
+
+//Routed MW
+Route::view("routeMW","routeMW")->middleware('protectedPages');
